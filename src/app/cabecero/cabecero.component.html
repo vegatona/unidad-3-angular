@@ -1,0 +1,32 @@
+<!-- Cabecero centrado -->
+    <!-- Componente: Cabecero -->
+    <div class="row justify-content-center">
+      <div class="p-4 rounded border border-primary text-center">
+        <!-- Total -->
+        <h4 class="mb-3">Presupuesto Disponible:</h4>
+        <div class="display-3 fw-bold text-warning">
+          ${{ presupuesto | number:'1.2-2' }}
+        </div>
+        <div class="row mt-4 justify-content-center">
+          <div class="col-md-5 text-center">
+            <!-- Total Ingresos -->
+            <div class="text-uppercase">INGRESOS</div>
+            <div class="text-success h5">
+              ${{ totalIngresos | number:'1.2-2' }}
+            </div>
+          </div>
+          <div class="col-md-5 text-center">
+            <!-- Total Egresos -->
+            <div class="text-uppercase">EGRESOS</div>
+            <div class="text-danger h5">
+              ${{ totalEgresos | number:'1.2-2' }}
+              <!-- Porcentaje -->
+              <span class="badge bg-success ms-2">
+                {{ porcentajeEgresos | number:'1.2-2' }}%
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
